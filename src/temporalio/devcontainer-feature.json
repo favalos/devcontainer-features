@@ -1,0 +1,19 @@
+{
+    "name": "Temporalio",
+    "id": "temporalio",
+    "version": "1.0.0",
+    "description": "A Temporal.io feature",
+    "options": {
+        "namespace": {
+            "type": "string",
+            "proposals": [
+                "default"
+            ],
+            "default": "default",
+            "description": "Enter a name for your namespace."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
