@@ -5,7 +5,7 @@ echo "Activating feature 'temporalio'"
 
 TMP_FOLDER="$_CONTAINER_USER_HOME/tmp"
 TEMPORALITE_VERSION="0.3.0"
-NAMESPACE="${NAMESPACE:'default'}"
+NAMESPACE=["$NAMESPACE"="default"]
 TEMPORALITE_URL="https://github.com/temporalio/temporalite/releases/download/v${TEMPORALITE_VERSION}/temporalite_${TEMPORALITE_VERSION}_linux_amd64.tar.gz"
 TEMPORALITE_FILE="temporalite_linux_amd64.tar.gz"
 TEMPORLITE_EXEC="temporalite"
