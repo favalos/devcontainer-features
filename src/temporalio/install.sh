@@ -1,5 +1,8 @@
-#!/bin/sh
+#!/bin/bash -i
+
 set -e
+
+source ./library_scripts.sh
 
 echo "Activating feature 'temporalio'"
 
@@ -16,7 +19,7 @@ mkdir $TMP_FOLDER
 cd $TMP_FOLDER
 
 echo "Download Temporalite release from: ${TEMPORALITE_URL}"
-curl -L -o $TEMPORALITE_FILE $TEMPORALITE_URL
+clean_download $TEMPORALITE_URL $TEMPORALITE_FILE 
 
 tar -xf $TEMPORALITE_FILE
 
@@ -28,4 +31,4 @@ rm -rf $TMP_FOLDER
 
 chmod +x /usr/local/bin/$TEMPORLITE_EXEC
 
-/usr/local/bin/${TEMPORLITE_EXEC} start -n $NAMESPACE --ephemeral &
+/usr/local/bin/${TEMPORLITE_EXEC} start --n $NAMESPACE --ephemeral &
