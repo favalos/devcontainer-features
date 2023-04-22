@@ -16,7 +16,7 @@ $nanolayer_location \
     install \
     devcontainer-feature \
     "ghcr.io/devcontainers-contrib/features/gh-release:1.0.14" \
-    --option repo='temporalio/temporalite' --option binaryNames='temporalite' --option version="v0.3.0"
+    --option repo='temporalio/temporalite' --option binaryNames='temporalite' --option version="latest"
 
 
 echo 'Done!'
