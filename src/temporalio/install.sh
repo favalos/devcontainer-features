@@ -11,12 +11,15 @@ source ./library_scripts.sh
 # of the script
 ensure_nanolayer nanolayer_location "v0.4.28"
 
+$nanolayer_location \
+    install \
+    devcontainer-feature \
+    "ghcr.io/devcontainers/features/git:1"
 
 $nanolayer_location \
     install \
     devcontainer-feature \
     "ghcr.io/devcontainers-contrib/features/gh-release:1.0.14" \
     --option repo='temporalio/temporalite' --option binaryNames='temporalite' --option version="latest"
-
 
 echo 'Done!'
