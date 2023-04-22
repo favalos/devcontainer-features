@@ -15,7 +15,7 @@ A Temporal.io feature
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| namespace | Enter a name for your namespace. | string | default |
+
 
 
 
